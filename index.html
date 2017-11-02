@@ -4,11 +4,13 @@
 		<meta name="google-signin-client_id" content="133415920957-1q0q39cm2nmohv86ik1d0rt0jp8o0q3o.apps.googleusercontent.com">
   </head>
   <body>
-  <p> commit 3</p>
+  <p> commit 4</p>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <script>
+    	globalUser = test;
       function onSignIn(googleUser) {
   			var profile = googleUser.getBasicProfile();
+  			globalUser = googleUser;
   			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   			console.log('Name: ' + profile.getName());
   			console.log('Image URL: ' + profile.getImageUrl());
